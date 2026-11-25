@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KROSSFIN — кроссовки и одежда в Караганде</title>
+<meta name="description" content="KROSSFIN: кроссовки и одежда в Караганде. ТД «Абсолют», 2 этаж, бутики 16–17. Kaspi Red, рассрочка 0-0-12, доставка по Казахстану. Заказ в WhatsApp.">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:title" content="KROSSFIN — кроссовки и одежда в Караганде">
+<meta property="og:description" content="Топовые модели. ТД «Абсолют», 2 этаж. Заказ в WhatsApp, доставка по Казахстану.">
+<meta property="og:image" content="media/tile-shoes.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23E3262B'/%3E%3Cpath d='M21 17h8.4v11.6L39.6 17H50L37.6 30.2 51 47H40.4l-9-11.6-2 2.1V47H21z' fill='%23fff' transform='skewX(-8) translate(4 0)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+
+<!-- живой фон -->
+<div class="bg" aria-hidden="true"><i class="bg__blob bg__blob--1"></i><i class="bg__blob bg__blob--2"></i><i class="bg__blob bg__blob--3"></i><i class="bg__grid"></i><i class="bg__grain"></i></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<div class="ticker" aria-label="Новости магазина"><div class="ticker__track" id="ticker"></div></div>
+
+<header class="top" id="top">
+  <div class="wrap top__in">
+    <a href="#" class="top__logo" id="topLogo" aria-label="KROSSFIN — на главную"></a>
+    <nav class="top__nav" aria-label="Разделы">
+      <a href="#catalog" data-store-link="shoes">Кроссовки</a>
+      <a href="#catalog" data-store-link="wear">Одежда</a>
+      <a href="#promos">Акции</a>
+      <a href="#lookbook">Образы</a>
+      <a href="#visit">Контакты</a>
+    </nav>
+    <div class="top__acts">
+      <button class="icon-btn" id="searchBtn" aria-label="Поиск"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b class="cart-count" id="cartCount" hidden>0</b></button>
+      <button class="icon-btn burger" id="burger" aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- мобильное меню -->
+<div class="menu" id="menu" hidden>
+  <nav>
+    <a href="#catalog" data-store-link="shoes"><span>01</span>Кроссовки</a>
+    <a href="#catalog" data-store-link="wear"><span>02</span>Одежда</a>
+    <a href="#promos"><span>03</span>Акции</a>
+    <a href="#lookbook"><span>04</span>Образы</a>
+    <a href="#visit"><span>05</span>Контакты</a>
+  </nav>
+  <div class="menu__foot" id="menuFoot"></div>
+</div>
+
+<main>
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <section class="hero" id="hero">
+    <div class="hero__word" aria-hidden="true"><div><span>KROSSFIN</span><span>KROSSFIN</span><span>KROSSFIN</span><span>KROSSFIN</span></div></div>
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><i></i><span id="heroKicker">Караганда</span></p>
+        <h1 class="hero__title" id="heroTitle"><span class="ln"><span>Топовые</span></span><span class="ln"><span class="hl">модели</span></span></h1>
+        <p class="hero__text reveal" id="heroText"></p>
+        <div class="hero__cta reveal">
+          <a href="#catalog" class="btn btn--red" data-store-link="shoes"><span>Кроссовки</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#catalog" class="btn btn--ghost" data-store-link="wear"><span>Одежда</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <ul class="hero__facts reveal">
+          <li><b id="factFollowers">33K+</b><span>подписчиков<br>в Instagram</span></li>
+          <li><b>0-0-12</b><span>рассрочка<br>Kaspi</span></li>
+          <li><b>РК</b><span>доставка по<br>Казахстану</span></li>
+        </ul>
+      </div>
+
+      <div class="stage" id="stage">
+        <div class="stage__ring" aria-hidden="true"></div>
+        <div class="stage__disc" aria-hidden="true"></div>
+        <svg class="stage__badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text textLength="486"><textPath href="#circ" textLength="486" lengthAdjust="spacing">KROSSFIN · TOP MODELS · KARAGANDA ·</textPath></text>
+        </svg>
+        <div class="stage__num" id="stageNum" aria-hidden="true">01</div>
+        <div class="stage__shoes" id="stageShoes"></div>
+        <div class="stage__shadow" aria-hidden="true"></div>
+        <button class="stage__card" id="stageCard" type="button"><span class="stage__brand" id="stageBrand"></span><b id="stageName"></b><em id="stagePrice"></em><i class="go"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></i></button>
+        <div class="stage__dots" id="stageDots"></div>
+      </div>
+    </div>
+    <a href="#stores" class="hero__scroll" aria-label="Листать вниз"><span></span></a>
+  </section>
+
+  <!-- ДВА МАГАЗИНА -->
+  <section class="stores wrap" id="stores">
+    <a href="#catalog" class="store reveal" data-store-link="shoes" id="tileShoes">
+      <div class="store__img"><img alt="Кроссовки KROSSFIN" loading="lazy"></div>
+      <div class="store__body"><span class="store__handle">@krossfin_kz</span><h2>Кроссовки</h2><p>Nike, Jordan, ASICS, Salomon, Adidas, New Balance и зимние модели с Gore-Tex</p><span class="store__go">Смотреть <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <span class="store__count" id="cntShoes"></span>
+    </a>
+    <a href="#catalog" class="store reveal" data-store-link="wear" id="tileWear">
+      <div class="store__img"><img alt="Одежда KROSSFIN" loading="lazy"></div>
+      <div class="store__body"><span class="store__handle">@krossfin.wear</span><h2>Одежда</h2><p>Пуховики, худи, костюмы, футболки, ветровки и аксессуары — соберём образ целиком</p><span class="store__go">Смотреть <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <span class="store__count" id="cntWear"></span>
+    </a>
+  </section>
+
+  <!-- АКЦИИ -->
+  <section class="sec" id="promos" hidden>
+    <div class="wrap">
+      <div class="sec__head reveal"><div><p class="kicker">Сейчас действует</p><h2 class="sec__title">Акции</h2></div>
+        <div class="arrows"><button class="arr" data-scroll="promoRow" data-dir="-1" aria-label="Назад">←</button><button class="arr" data-scroll="promoRow" data-dir="1" aria-label="Вперёд">→</button></div></div>
+    </div>
+    <div class="promo-row" id="promoRow"></div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section class="sec catalog" id="catalog">
+    <div class="wrap">
+      <div class="sec__head reveal"><div><p class="kicker">Каталог</p><h2 class="sec__title" id="catTitle">Кроссовки</h2></div>
+        <div class="seg" id="storeSeg" role="tablist">
+          <button role="tab" data-store="shoes" class="on">Кроссовки</button>
+          <button role="tab" data-store="wear">Одежда</button>
+          <i class="seg__pill"></i>
+        </div>
+      </div>
+      <div class="filters" id="filters">
+        <div class="chips" id="catChips"></div>
+        <div class="filters__row">
+          <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input type="search" id="q" placeholder="Найти: Jordan, пуховик, Gore-Tex…" autocomplete="off"></label>
+          <select id="sizeSel" class="sel" aria-label="Размер"><option value="">Размер</option></select>
+          <select id="brandSel" class="sel" aria-label="Бренд"><option value="">Бренд</option></select>
+          <select id="sortSel" class="sel" aria-label="Сортировка"><option value="">Новинки</option><option value="cheap">Дешевле</option><option value="exp">Дороже</option><option value="sale">Со скидкой</option></select>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden><b>Ничего не нашли</b><p>Попробуйте другой размер или бренд — или напишите нам, уточним наличие.</p><button class="btn btn--ghost btn--sm" id="resetF">Сбросить фильтры</button></div>
+      <div class="more"><button class="btn btn--ghost" id="moreBtn" hidden>Показать ещё</button></div>
+    </div>
+  </section>
+
+  <!-- БРЕНДЫ -->
+  <section class="brands" aria-label="Бренды"><div class="brands__track" id="brands"></div></section>
+
+  <!-- ОБРАЗЫ -->
+  <section class="sec lookbook" id="lookbook">
+    <div class="wrap"><div class="sec__head reveal"><div><p class="kicker">Lookbook</p><h2 class="sec__title" id="lbTitle">Образы</h2></div><p class="sec__note">Всё с фото есть в бутике. Нажмите на образ — спросим наличие в WhatsApp.</p></div></div>
+    <div class="lb" id="lb"><div class="lb__track" id="lbTrack"></div></div>
+  </section>
+
+  <!-- ПОЧЕМУ МЫ -->
+  <section class="sec perks wrap">
+    <div class="perk reveal"><i><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18M7 15h4"/></svg></i><b>Kaspi Red и рассрочка 0-0-12</b><p>Платите частями без переплат — оформим прямо в бутике.</p></div>
+    <div class="perk reveal"><i><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></i><b>Доставка по Казахстану</b><p>По Караганде — курьером, в другие города — отправкой.</p></div>
+    <div class="perk reveal"><i><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i><b>Примерка в бутике</b><p>ТД «Абсолют», 2 этаж — приходите, подберём размер.</p></div>
+    <div class="perk reveal"><i><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></i><b>Новинки каждую неделю</b><p>Следите за дропами в Instagram и на сайте.</p></div>
+  </section>
+
+  <!-- О НАС / КОНТАКТЫ -->
+  <section class="sec visit" id="visit">
+    <div class="wrap visit__in">
+      <div class="visit__pics reveal">
+        <img id="aboutImg" alt="Бутик KROSSFIN" loading="lazy">
+        <img id="aboutImg2" alt="Команда KROSSFIN" loading="lazy">
+        <div class="visit__stamp" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="circ2" d="M100,100 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"/></defs><text><textPath href="#circ2" textLength="436" lengthAdjust="spacing">ЖДЁМ В ГОСТИ · ТД АБСОЛЮТ · 2 ЭТАЖ ·</textPath></text></svg><span id="stampMark"></span></div>
+      </div>
+      <div class="visit__copy">
+        <p class="kicker reveal">Ждём в гости</p>
+        <h2 class="sec__title reveal" id="aboutTitle">Один бутик — два магазина</h2>
+        <p class="visit__text reveal" id="aboutText"></p>
+        <div class="addr reveal">
+          <div><span>Адрес</span><b id="addr"></b><small id="addrNote"></small></div>
+          <div><span>Время работы</span><b id="hours"></b><small>Без выходных</small></div>
+        </div>
+        <div class="contacts reveal" id="contacts"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__big" aria-hidden="true">KROSSFIN</div>
+  <div class="wrap foot__in">
+    <div class="foot__logo" id="footLogo"></div>
+    <div class="foot__links" id="footLinks"></div>
+    <p class="foot__copy">© <span id="year"></span> KROSSFIN · Караганда · <a href="admin.html" class="foot__adm">Вход для сотрудников</a></p>
+  </div>
+</footer>
+
+<!-- кнопка корзины (мобильная) -->
+<button class="fab" id="fab" aria-label="Корзина" hidden><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b id="fabCount">0</b></button>
+
+<!-- КАРТОЧКА ТОВАРА -->
+<div class="modal" id="pm" hidden>
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box pm" role="dialog" aria-modal="true" aria-labelledby="pmName">
+    <button class="modal__x" data-close aria-label="Закрыть">×</button>
+    <div class="pm__media"><div class="pm__main" id="pmMain"></div><div class="pm__thumbs" id="pmThumbs"></div></div>
+    <div class="pm__info">
+      <p class="pm__brand" id="pmBrand"></p>
+      <h3 class="pm__name" id="pmName"></h3>
+      <div class="pm__price" id="pmPrice"></div>
+      <div class="pm__promo" id="pmPromo" hidden></div>
+      <div class="pm__sizes"><div class="pm__lbl"><span>Размер</span><small id="pmSizeHint"></small></div><div class="sizes" id="pmSizes"></div></div>
+      <div class="pm__acts">
+        <div class="qty"><button type="button" data-qty="-1" aria-label="Меньше">−</button><span id="pmQty">1</span><button type="button" data-qty="1" aria-label="Больше">+</button></div>
+        <button class="btn btn--red btn--grow" id="pmAdd"><span>В корзину</span></button>
+      </div>
+      <button class="btn btn--wa btn--block" id="pmWa"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path d="M8.5 7.5c.3-.6.6-.6 1-.6h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4 0 .6a7 7 0 0 0 3.3 2.9c.2.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5 0 .7-.4 1.5-1.1 1.8-.7.3-1.8.5-3.6-.3a10.8 10.8 0 0 1-4.6-4.2c-.6-1-.8-2-.4-3z" fill="#fff" stroke="none"/></svg><span>Купить в 1 клик через WhatsApp</span></button>
+      <p class="pm__desc" id="pmDesc"></p>
+      <ul class="pm__perks"><li>Kaspi Red и рассрочка 0-0-12</li><li>Доставка по Караганде и Казахстану</li><li>Примерка в бутике — ТД «Абсолют», 2 этаж</li></ul>
+    </div>
+  </div>
+</div>
+
+<!-- ПРОСМОТР АКЦИИ -->
+<div class="modal" id="prm" hidden>
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box prm" role="dialog" aria-modal="true"><button class="modal__x" data-close aria-label="Закрыть">×</button><div id="prmBody"></div></div>
+</div>
+
+<!-- КОРЗИНА -->
+<div class="drawer" id="cart" hidden>
+  <div class="drawer__bg" data-close></div>
+  <aside class="drawer__box" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <header class="drawer__head"><h3 id="cartTitle">Корзина <small id="cartN"></small></h3><button class="modal__x" data-close aria-label="Закрыть">×</button></header>
+    <div class="drawer__body" id="cartBody"></div>
+    <footer class="drawer__foot" id="cartFoot"></footer>
+  </aside>
+</div>
+
+<!-- ПОИСК -->
+<div class="modal search-m" id="sm" hidden>
+  <div class="modal__bg" data-close></div>
+  <div class="modal__box sm" role="dialog" aria-modal="true" aria-label="Поиск">
+    <label class="search search--big"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input type="search" id="sq" placeholder="Название, бренд или категория" autocomplete="off"></label>
+    <div class="sm__res" id="sres"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="common.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
